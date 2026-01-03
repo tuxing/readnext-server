@@ -29,6 +29,10 @@ const ArticleSchema = new mongoose.Schema({
 // Compound index for uniqueness within namespace
 ArticleSchema.index({ namespace: 1, id: 1 }, { unique: true });
 
+// INDEX FOR SYNC SPEED (Pull Query)
+// Speeds up: find({ namespace, updatedAt: {$gt} }).sort({ updatedAt: 1 })
+ArticleSchema.index({ namespace: 1, updatedAt: 1 });
+
 const Article = mongoose.model('Article', ArticleSchema);
 
 if (MONGODB_URI) {

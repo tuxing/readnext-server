@@ -1,0 +1,558 @@
+Server running on http://0.0.0.0:3000
+[DEBUG] Incoming POST /api/sync/readnext - Length: 27
+[readnext] Sync Req: 0 changes, LastSync: 0
+[DEBUG] Incoming POST /api/sync/readnext - Length: 37
+[readnext] Sync Req: 0 changes, LastSync: 0
+Server running on http://0.0.0.0:3000
+[DEBUG] Incoming POST /api/sync/readnext - Length: 37
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 0 (limit 0, count 0). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 0 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 1 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 2 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 3 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 4 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 5 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 6 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 7 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 8 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 47
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 9 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 48
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 10 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 48
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 11 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 48
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 12 (limit 50, count 34). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 39
+[readnext] Sync Req: 0 changes, LastSync: 1765502405835
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50000, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765506381892
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765510666243
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765510666243
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765510673510
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765510673510
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765502343908
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765511238082
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765510679233
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765510679233
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765511250179
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 53518247
+[readnext] Sync Req: 634 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 1 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 2 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 3 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 4 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 5 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 6 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 7 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 8 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 9 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 10 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 11 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 634 updates. Sending page 12 (limit 50, count 34). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 420535
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 749777
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 2166841
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1773198
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1072831
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1578129
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1718732
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1118880
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 437855
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 749976
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1224966
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1003423
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1025704
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 620506
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1472223
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1346609
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 2867749
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1411949
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1681450
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 712297
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1169968
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 641134
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 968928
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 834971
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 157042
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 677489
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 960031
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 3174914
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 160653
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 397110
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 594449
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 552210
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 385762
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 363098
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 449678
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 136604
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 461178
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 353656
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 311936
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 404307
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 211270
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 715616
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 216155
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 2426795
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 890898
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 608018
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 270758
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 793029
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 299272
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 426082
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 737799
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 407960
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 798426
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 737905
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 320507
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 657315
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 760818
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 491170
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 579735
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 614150
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 1069534
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 425347
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 502446
+[readnext] Sync Req: 10 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 263577
+[readnext] Sync Req: 5 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765511277120
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765513651421
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765513651421
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765508562856
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 12287
+[readnext] Sync Req: 1 changes, LastSync: 1765513670527
+[readnext] Pull: Found 1 updates. Sending page 0 (limit 0, count 0). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765513670527
+[readnext] Pull: Found 1 updates. Sending page 0 (limit 50, count 1). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765513965482
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765513965482
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765511873441
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 683132
+[readnext] Sync Req: 1 changes, LastSync: 1765513799959
+[readnext] Pull: Found 2 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765513994559
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765513983870
+[readnext] Pull: Found 1 updates. Sending page 0 (limit 0, count 0). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765513983870
+[readnext] Pull: Found 1 updates. Sending page 0 (limit 50, count 1). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765514238117
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765514191019
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765538606022
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 683122
+[readnext] Sync Req: 1 changes, LastSync: 1765514273514
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765514273514
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765538621619
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765538638576
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 53518277
+[readnext] Sync Req: 634 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 1 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 2 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 3 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 4 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 5 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 6 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 7 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 8 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 9 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 10 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 11 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 12 (limit 50, count 37). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765538394304
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765538680753
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765538680753
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765539828444
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 36323
+[readnext] Sync Req: 2 changes, LastSync: 1765538913084
+[readnext] Pull: Found 2 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765540144636
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765540144636
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765539856498
+[readnext] Pull: Found 2 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 49
+[readnext] Sync Req: 0 changes, LastSync: 1765540351891
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 0, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 59
+[readnext] Sync Req: 0 changes, LastSync: 1765540351891
+[readnext] Pull: Found 0 updates. Sending page 0 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 24221
+[readnext] Sync Req: 2 changes, LastSync: 1765539882601
+[readnext] Pull: Found 2 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 53517902
+[readnext] Sync Req: 634 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 1 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 2 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 3 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 4 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 5 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 6 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 7 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 8 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 9 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 10 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 11 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 12 (limit 50, count 37). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765552043949
+[readnext] Pull: Found 0 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 53517902
+[readnext] Sync Req: 634 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 1 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 2 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 3 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 4 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 5 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 6 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 7 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 8 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 34
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 9 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 10 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 11 (limit 50, count 50). HasMore: true
+[DEBUG] Incoming POST /api/sync/readnext - Length: 35
+[readnext] Sync Req: 0 changes, LastSync: 0
+[readnext] Pull: Found 637 updates. Sending page 12 (limit 50, count 37). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 157
+[readnext] Sync Req: 1 changes, LastSync: 1765552064260
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 157
+[readnext] Sync Req: 1 changes, LastSync: 1765552181830
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765552330213
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false
+[DEBUG] Incoming POST /api/sync/readnext - Length: 46
+[readnext] Sync Req: 0 changes, LastSync: 1765552360396
+[readnext] Pull: Found 1 updates. Sending page 1 (limit 50, count 0). HasMore: false

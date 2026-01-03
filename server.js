@@ -42,6 +42,14 @@ if (MONGODB_URI) {
     console.log("No MONGODB_URI found. Using Local File Storage (db.json).");
 }
 
+// MANUALLY Handle OPTIONS for Preflight issues
+app.options('*', (req, res) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.sendStatus(200);
+});
+
 app.use(cors());
 
 // Use built-in Express body parsing (Express 4.16+)

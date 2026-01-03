@@ -125,48 +125,58 @@ app.post('/api/sync/:namespace', async (req, res) => {
 
         // 2. Identify Outgoing Changes (Pull)
         let updatesForClient = [];
+        let limit = 50; // Default safe limit
+        if (req.body.limit && !isNaN(req.body.limit)) {
+            limit = parseInt(req.body.limit);
+            if (limit > 50) limit = 50; // Hard Cap
+        }
+        if (limit <= 0) limit = 50; // Safety
+
+        const page = parseInt(req.body.page) || 0;
+        const skip = page * limit;
+        let hasMore = false;
+        let totalUpdates = 0;
 
         if (USE_MONGO) {
-            // Fetch from Mongo
+            console.time(`[${namespace}] MongoRead`);
+            // Fetch only requested page + 1 to check hasMore
+            // Sort by updatedAt is CRITICAL for stable paging
             const docs = await Article.find({
                 namespace: namespace,
                 updatedAt: { $gt: lastSync }
-            }).limit(500); // Safety limit for query, pagination handled by logic?
-            // Actually our pagination logic expects all candidates then slices. 
-            // For massive DBs this is bad, but for readnext it's fine.
-            // Let's rely on standard find for now.
-            // Mongoose returns docs. map to data.
+            })
+                .sort({ updatedAt: 1 })
+                .skip(skip)
+                .limit(limit + 1); // Fetch one extra to detect hasMore
+
+            console.timeEnd(`[${namespace}] MongoRead`);
+
+            if (docs.length > limit) {
+                hasMore = true;
+                docs.pop(); // Remove the extra check item
+            }
+
             updatesForClient = docs.map(d => d.data);
+
+            // Optional: Count total (slow, maybe skip?)
+            // totalUpdates = await Article.countDocuments({ namespace: namespace, updatedAt: { $gt: lastSync } });
+            totalUpdates = 9999; // Dummy, client doesn't strictly need exact total
         } else {
-            // Local File Path
+            // Local File Path (Keep existing logic but apply limit)
             if (db[namespace]) {
-                updatesForClient = db[namespace].filter(a => (a.updatedAt || 0) > lastSync);
+                let all = db[namespace].filter(a => (a.updatedAt || 0) > lastSync);
+                all.sort((a, b) => (a.updatedAt || 0) - (b.updatedAt || 0));
+
+                totalUpdates = all.length;
+                hasMore = (skip + limit) < totalUpdates;
+                updatesForClient = all.slice(skip, skip + limit);
             }
         }
 
-
-
-        // Sort by updatedAt ASC to ensure consistent paging if we were using cursor, 
-        // but for 'page' offset, any deterministic sort is fine.
-        updatesForClient.sort((a, b) => (a.updatedAt || 0) - (b.updatedAt || 0));
-
-        // Pagination Logic
-        let limit = 50000; // Default
-        if (req.body.limit !== undefined && req.body.limit !== null) {
-            limit = parseInt(req.body.limit);
-        }
-
-        const page = req.body.page || 0;
-
-        const totalUpdates = updatesForClient.length;
-        const startIndex = page * limit;
-        const slicedUpdates = updatesForClient.slice(startIndex, startIndex + limit);
-        const hasMore = (startIndex + limit) < totalUpdates;
-
-        console.log(`[${namespace}] Pull: Found ${totalUpdates} updates. Sending page ${page} (limit ${limit}, count ${slicedUpdates.length}). HasMore: ${hasMore}`);
+        console.log(`[${namespace}] Pull: Sending page ${page} (limit ${limit}, count ${updatesForClient.length}). HasMore: ${hasMore}`);
 
         res.json({
-            changes: slicedUpdates,
+            changes: updatesForClient,
             serverTime: Date.now(),
             hasMore: hasMore,
             totalUpdates: totalUpdates

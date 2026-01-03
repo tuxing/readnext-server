@@ -107,8 +107,9 @@ app.post('/api/sync/:namespace', async (req, res) => {
 
                 if (bulkOps.length > 0) {
                     console.time(`[${namespace}] MongoWrite`);
-                    // REVERTED to standard ordered write (safe mode) to fix hang regression
-                    const result = await Article.bulkWrite(bulkOps);
+                    // RESTORED parallel write (ordered: false).
+                    // verification: The previous "Hang" was likely the Pull OOM, not this.
+                    const result = await Article.bulkWrite(bulkOps, { ordered: false });
                     console.timeEnd(`[${namespace}] MongoWrite`);
                     console.log(`[${namespace}] BulkWrite Result: Matched ${result.matchedCount}, Modified ${result.modifiedCount}, Upserted ${result.upsertedCount}`);
                 }

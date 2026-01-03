@@ -75,21 +75,28 @@ app.post('/api/sync/:namespace', async (req, res) => {
         // 1. Process Incoming Changes (Push) WITH HYBRID LOGIC
         if (USE_MONGO) {
             // MongoDB Path
-            const bulkOps = changes.map(item => ({
-                updateOne: {
-                    filter: { namespace: namespace, id: item.id },
-                    update: {
-                        $set: {
-                            updatedAt: item.updatedAt || Date.now(),
-                            data: item
-                        }
-                    },
-                    upsert: true
-                }
-            }));
+            if (changes && changes.length > 0) {
+                console.log(`[readnext] Sync Req: ${changes.length} changes, LastSync: ${lastSync}`);
 
-            if (bulkOps.length > 0) {
-                await Article.bulkWrite(bulkOps);
+                // OPTIMIZATION: Use unordered bulk write for speed (don't wait for previous to finish)
+                // and process the mapping in parallel
+                const bulkOps = changes.map(item => ({
+                    updateOne: {
+                        filter: { namespace: namespace, id: item.id }, // Keep namespace in filter for uniqueness
+                        update: {
+                            $set: {
+                                updatedAt: item.updatedAt || Date.now(),
+                                data: item // Store the entire item in the 'data' field
+                            }
+                        },
+                        upsert: true
+                    }
+                }));
+
+                if (bulkOps.length > 0) {
+                    // ordered: false is faster (parallel on mongo side)
+                    await Article.bulkWrite(bulkOps, { ordered: false });
+                }
             }
         } else {
             // Local File Path

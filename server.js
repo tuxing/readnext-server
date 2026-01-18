@@ -197,6 +197,6 @@ app.post('/api/sync/:namespace', async (req, res) => {
 app.get('/', (req, res) => res.send('ReadNext Local Sync Server Running.'));
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`ReadNext Server v1.1.2 running on http://0.0.0.0:${PORT}`);
+    console.log(`ReadNext Server v1.1.3 running on http://0.0.0.0:${PORT}`);
     console.log(`Sync Endpoint: http://0.0.0.0:${PORT}/api/sync/:namespace`);
 });

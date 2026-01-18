@@ -16,7 +16,7 @@ Best for: Personal use on your home network
 
 1. **Download and install**
    ```bash
-   git clone https://github.com/yourname/readnext-server
+   git clone https://github.com/tuxing/readnext-server
    cd readnext-server
    npm install
    ```
@@ -122,6 +122,27 @@ In ReadNext app/extension sync settings, enter your Render URL:
 ```
 https://readnext-sync.onrender.com
 ```
+
+---
+
+### Step 4: Secure Your Server (Optional)
+
+To prevent strangers from syncing with your server, set a 4-digit PIN.
+
+**On Render:**
+1. Go to your **Dashboard** > **readnext-sync** > **Environment**.
+2. Click **Add Environment Variable**.
+3. Key: `SERVER_PIN`
+4. Value: `1234` (or any 4 digits).
+5. Click **Save Changes**. Render will restart the server.
+
+**On Local (Linux/Mac):**
+```bash
+SERVER_PIN=1234 node server.js
+```
+
+**In the App/Extension:**
+Go to **Settings > Sync** and enter the same PIN in the "Server PIN" field.
 
 ---
 

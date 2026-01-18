@@ -76,8 +76,26 @@ const saveDB = () => {
     fs.writeFileSync(DB_FILE, JSON.stringify(db, null, 2));
 };
 
+// --- AUTH MIDDLEWARE ---
+const SERVER_PIN = process.env.SERVER_PIN;
+
+const validateApiPin = (req, res, next) => {
+    // If no pin is set on server, allow all
+    if (!SERVER_PIN) return next();
+
+    const clientPin = req.headers['x-auth-pin'];
+
+    // Strict check
+    if (clientPin === SERVER_PIN) {
+        return next();
+    }
+
+    console.log(`[AUTH] Blocked request from ${req.ip} - Invalid/Missing PIN`);
+    return res.status(401).json({ error: 'Unauthorized: Invalid Server PIN' });
+};
+
 // Sync Endpoint (Generic)
-app.post('/api/sync/:namespace', async (req, res) => {
+app.post('/api/sync/:namespace', validateApiPin, async (req, res) => {
     try {
         const { namespace } = req.params;
         const { changes = [], lastSync = 0 } = req.body;

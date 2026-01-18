@@ -141,6 +141,13 @@ To prevent strangers from syncing with your server, set a 4-digit PIN.
 SERVER_PIN=1234 node server.js
 ```
 
+**Run as Service (Systemd):**
+Add this line to your service file (`[Service]` section):
+```ini
+Environment=SERVER_PIN=1234
+```
+Then run: `sudo systemctl daemon-reload && sudo systemctl restart readnext`
+
 **In the App/Extension:**
 Go to **Settings > Sync** and enter the same PIN in the "Server PIN" field.
 

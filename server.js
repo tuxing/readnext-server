@@ -148,9 +148,9 @@ app.post('/api/sync/:namespace', async (req, res) => {
             // Sort by updatedAt is CRITICAL for stable paging
             const docs = await Article.find({
                 namespace: namespace,
-                updatedAt: { $gt: lastSync }
+                updatedAt: { $gte: lastSync }  // Changed from $gt to $gte to not miss same-timestamp items
             })
-                .sort({ updatedAt: 1 })
+                .sort({ updatedAt: 1, _id: 1 })  // Secondary sort by _id for stable ordering
                 .skip(skip)
                 .limit(limit + 1); // Fetch one extra to detect hasMore
 
@@ -169,7 +169,7 @@ app.post('/api/sync/:namespace', async (req, res) => {
         } else {
             // Local File Path (Keep existing logic but apply limit)
             if (db[namespace]) {
-                let all = db[namespace].filter(a => (a.updatedAt || 0) > lastSync);
+                let all = db[namespace].filter(a => (a.updatedAt || 0) >= lastSync);  // Changed from > to >=
                 all.sort((a, b) => (a.updatedAt || 0) - (b.updatedAt || 0));
 
                 totalUpdates = all.length;

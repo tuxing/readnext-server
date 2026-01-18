@@ -106,7 +106,7 @@ Best for: Access from anywhere, syncing across networks
 2. Click "New" → "Web Service"
 3. Connect your GitHub repo containing this server
 4. Configure:
-   - **Name**: `readnext-sync`
+   - **Name**: `readnext-server`
    - **Runtime**: `Node`
    - **Build Command**: `npm install`
    - **Start Command**: `node server.js`
@@ -114,13 +114,13 @@ Best for: Access from anywhere, syncing across networks
    - Key: `MONGODB_URI`
    - Value: (paste your MongoDB connection string from Step 1)
 6. Click "Create Web Service"
-7. Wait for deploy, then copy your URL like: `https://readnext-sync.onrender.com`
+7. Wait for deploy, then copy your URL like: `https://readnext-server.onrender.com`
 
 ### Step 3: Connect Your Apps
 
 In ReadNext app/extension sync settings, enter your Render URL:
 ```
-https://readnext-sync.onrender.com
+https://readnext-server.onrender.com
 ```
 
 ---
@@ -130,7 +130,7 @@ https://readnext-sync.onrender.com
 To prevent strangers from syncing with your server, set a 4-digit PIN.
 
 **On Render:**
-1. Go to your **Dashboard** > **readnext-sync** > **Environment**.
+1. Go to your **Dashboard** > **readnext-server** > **Environment**.
 2. Click **Add Environment Variable**.
 3. Key: `SERVER_PIN`
 4. Value: `1234` (or any 4 digits).

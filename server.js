@@ -211,10 +211,44 @@ app.post('/api/sync/:namespace', validateApiPin, async (req, res) => {
     }
 });
 
+// --- SINGLE ARTICLE FETCH ---
+// GET /api/article/:namespace/:id - Fetch a single article by ID
+app.get('/api/article/:namespace/:id', validateApiPin, async (req, res) => {
+    try {
+        const { namespace, id } = req.params;
+        console.log(`[${namespace}] Single Article Fetch: ${id}`);
+
+        let article = null;
+
+        if (USE_MONGO) {
+            const doc = await Article.findOne({ namespace: namespace, id: id });
+            if (doc) {
+                article = doc.data;
+            }
+        } else {
+            // Local File Path
+            if (db[namespace]) {
+                article = db[namespace].find(a => a.id === id);
+            }
+        }
+
+        if (article) {
+            console.log(`[${namespace}] Found article: ${article.title || 'Untitled'}`);
+            res.json({ success: true, article: article });
+        } else {
+            console.log(`[${namespace}] Article not found: ${id}`);
+            res.status(404).json({ success: false, error: 'Article not found' });
+        }
+    } catch (e) {
+        console.error("Article Fetch Error:", e);
+        res.status(500).json({ success: false, error: e.message });
+    }
+});
+
 // Hello
 app.get('/', (req, res) => res.send('ReadNext Local Sync Server Running.'));
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`ReadNext Server v1.1.3 running on http://0.0.0.0:${PORT}`);
+    console.log(`ReadNext Server v1.2.0 running on http://0.0.0.0:${PORT}`);
     console.log(`Sync Endpoint: http://0.0.0.0:${PORT}/api/sync/:namespace`);
 });

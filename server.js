@@ -106,7 +106,6 @@ app.post('/api/sync/:namespace', validateApiPin, async (req, res) => {
         if (USE_MONGO) {
             // MongoDB Path
             if (changes && changes.length > 0) {
-                console.log(`[readnext] Sync Req: ${changes.length} changes, LastSync: ${lastSync}`);
 
                 // CONTENT HEALING: Fetch existing articles to check for incomplete content
                 const incomingIds = changes.map(item => item.id);
@@ -294,10 +293,68 @@ app.get('/api/article/:namespace/:id', validateApiPin, async (req, res) => {
     }
 });
 
+// --- STATS ENDPOINT ---
+// GET /api/stats/:namespace - Get article statistics including incomplete count
+app.get('/api/stats/:namespace', validateApiPin, async (req, res) => {
+    try {
+        const { namespace } = req.params;
+        const CONTENT_THRESHOLD = 200;
+
+        let total = 0;
+        let incomplete = 0;
+        let incompleteArticles = [];
+
+        if (USE_MONGO) {
+            total = await Article.countDocuments({ namespace });
+
+            // Find incomplete articles (content < 200 chars)
+            const docs = await Article.find({ namespace }).lean();
+            docs.forEach(doc => {
+                const content = doc.data?.content || "";
+                if (content.length < CONTENT_THRESHOLD) {
+                    incomplete++;
+                    incompleteArticles.push({
+                        id: doc.id,
+                        title: doc.data?.title || 'Untitled',
+                        contentLength: content.length
+                    });
+                }
+            });
+        } else {
+            if (db[namespace]) {
+                total = db[namespace].length;
+                db[namespace].forEach(article => {
+                    const content = article.content || "";
+                    if (content.length < CONTENT_THRESHOLD) {
+                        incomplete++;
+                        incompleteArticles.push({
+                            id: article.id,
+                            title: article.title || 'Untitled',
+                            contentLength: content.length
+                        });
+                    }
+                });
+            }
+        }
+
+        console.log(`[${namespace}] Stats: ${total} total, ${incomplete} incomplete`);
+
+        res.json({
+            namespace,
+            total,
+            incomplete,
+            incompleteArticles: incompleteArticles.slice(0, 20) // Limit to 20 for readability
+        });
+    } catch (e) {
+        console.error("Stats Error:", e);
+        res.status(500).json({ error: e.message });
+    }
+});
+
 // Hello
 app.get('/', (req, res) => res.send('ReadNext Local Sync Server Running.'));
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`ReadNext Server v1.3.0 running on http://0.0.0.0:${PORT}`);
+    console.log(`ReadNext Server v1.3.1 running on http://0.0.0.0:${PORT}`);
     console.log(`Sync Endpoint: http://0.0.0.0:${PORT}/api/sync/:namespace`);
 });

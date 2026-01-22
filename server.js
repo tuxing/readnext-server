@@ -108,28 +108,60 @@ app.post('/api/sync/:namespace', validateApiPin, async (req, res) => {
             if (changes && changes.length > 0) {
                 console.log(`[readnext] Sync Req: ${changes.length} changes, LastSync: ${lastSync}`);
 
-                // OPTIMIZATION: Use unordered bulk write for speed (don't wait for previous to finish)
-                // and process the mapping in parallel
-                const bulkOps = changes.map(item => ({
-                    updateOne: {
-                        filter: { namespace: namespace, id: item.id }, // Keep namespace in filter for uniqueness
-                        update: {
-                            $set: {
-                                updatedAt: item.updatedAt || Date.now(),
-                                data: item // Store the entire item in the 'data' field
-                            }
-                        },
-                        upsert: true
+                // CONTENT HEALING: Fetch existing articles to check for incomplete content
+                const incomingIds = changes.map(item => item.id);
+                const existingDocs = await Article.find({
+                    namespace: namespace,
+                    id: { $in: incomingIds }
+                }).lean();
+
+                // Build lookup map for quick access
+                const existingMap = {};
+                existingDocs.forEach(doc => {
+                    existingMap[doc.id] = doc;
+                });
+
+                const CONTENT_THRESHOLD = 200; // Characters - less than this is "incomplete"
+                let healedCount = 0;
+
+                // Process changes with content healing logic
+                const bulkOps = changes.map(item => {
+                    const existing = existingMap[item.id];
+                    const existingContent = existing?.data?.content || "";
+                    const incomingContent = item.content || "";
+
+                    const serverIncomplete = existingContent.length < CONTENT_THRESHOLD;
+                    const clientComplete = incomingContent.length >= CONTENT_THRESHOLD;
+
+                    let finalUpdatedAt = item.updatedAt || Date.now();
+
+                    // HEAL: If server has incomplete content and client has complete content,
+                    // accept client's version regardless of timestamp
+                    if (existing && serverIncomplete && clientComplete) {
+                        console.log(`[${namespace}] Content healing: ${item.id} (Server: ${existingContent.length} chars -> Client: ${incomingContent.length} chars)`);
+                        finalUpdatedAt = Date.now(); // Update timestamp to propagate to other clients
+                        healedCount++;
                     }
-                }));
+
+                    return {
+                        updateOne: {
+                            filter: { namespace: namespace, id: item.id },
+                            update: {
+                                $set: {
+                                    updatedAt: finalUpdatedAt,
+                                    data: item
+                                }
+                            },
+                            upsert: true
+                        }
+                    };
+                });
 
                 if (bulkOps.length > 0) {
                     console.time(`[${namespace}] MongoWrite`);
-                    // RESTORED parallel write (ordered: false).
-                    // verification: The previous "Hang" was likely the Pull OOM, not this.
                     const result = await Article.bulkWrite(bulkOps, { ordered: false });
                     console.timeEnd(`[${namespace}] MongoWrite`);
-                    console.log(`[${namespace}] BulkWrite Result: Matched ${result.matchedCount}, Modified ${result.modifiedCount}, Upserted ${result.upsertedCount}`);
+                    console.log(`[${namespace}] BulkWrite Result: Matched ${result.matchedCount}, Modified ${result.modifiedCount}, Upserted ${result.upsertedCount}${healedCount > 0 ? `, Healed ${healedCount}` : ''}`);
                 }
             }
         } else {
@@ -137,13 +169,30 @@ app.post('/api/sync/:namespace', validateApiPin, async (req, res) => {
             // Ensure namespace exists
             if (!db[namespace]) db[namespace] = [];
             const collection = db[namespace];
+            const CONTENT_THRESHOLD = 200;
+            let healedCount = 0;
 
             changes.forEach(clientItem => {
                 const idx = collection.findIndex(a => a.id === clientItem.id);
-                if (idx === -1) collection.push(clientItem);
-                else collection[idx] = clientItem;
+                if (idx === -1) {
+                    collection.push(clientItem);
+                } else {
+                    // CONTENT HEALING: Check if existing is incomplete
+                    const existingContent = collection[idx].content || "";
+                    const incomingContent = clientItem.content || "";
+
+                    if (existingContent.length < CONTENT_THRESHOLD && incomingContent.length >= CONTENT_THRESHOLD) {
+                        console.log(`[${namespace}] Content healing: ${clientItem.id} (Server: ${existingContent.length} chars -> Client: ${incomingContent.length} chars)`);
+                        clientItem.updatedAt = Date.now();
+                        healedCount++;
+                    }
+                    collection[idx] = clientItem;
+                }
             });
-            if (changes.length > 0) saveDB();
+            if (changes.length > 0) {
+                if (healedCount > 0) console.log(`[${namespace}] Healed ${healedCount} articles`);
+                saveDB();
+            }
         }
 
         // 2. Identify Outgoing Changes (Pull)
@@ -249,6 +298,6 @@ app.get('/api/article/:namespace/:id', validateApiPin, async (req, res) => {
 app.get('/', (req, res) => res.send('ReadNext Local Sync Server Running.'));
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`ReadNext Server v1.2.0 running on http://0.0.0.0:${PORT}`);
+    console.log(`ReadNext Server v1.3.0 running on http://0.0.0.0:${PORT}`);
     console.log(`Sync Endpoint: http://0.0.0.0:${PORT}/api/sync/:namespace`);
 });
